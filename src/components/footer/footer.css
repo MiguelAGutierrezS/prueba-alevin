@@ -1,0 +1,111 @@
+.pie-pagina {
+  background-color: #000;
+  border-top: 1px solid rgba(124, 58, 237, 0.2);
+  padding: 48px 0 24px;
+}
+
+.contenedor {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+.grid-footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+@media (min-width: 768px) {
+  .grid-footer {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.marca-footer {
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: linear-gradient(to right, #7c3aed, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 16px;
+}
+.texto-footer {
+  font-size: 0.875rem;
+  color: #d1d5db;
+  line-height: 1.5;
+}
+
+.redes-footer {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+}
+.redes-footer a {
+  width: 40px;
+  height: 40px;
+  background: #1f2937;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+.redes-footer a svg {
+  width: 18px;
+  height: 18px;
+  color: #fff;
+}
+.redes-footer a:hover {
+  background: #7c3aed;
+}
+
+.seccion-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.seccion-footer h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #7c3aed;
+  margin-bottom: 8px;
+}
+.enlaces-footer a {
+  font-size: 0.875rem;
+  color: #d1d5db;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.enlaces-footer a:hover {
+  color: #ffffff;
+}
+
+.contacto-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.contacto-footer div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+  color: #d1d5db;
+}
+.contacto-footer div svg {
+  width: 14px;
+  height: 14px;
+  color: #7c3aed;
+}
+.inferior-footer {
+  border-top: 1px solid #374151;
+  padding-top: 16px;
+  text-align: center;
+}
+.inferior-footer p {
+  font-size: 0.75rem;
+  color: #6b7280;
+}

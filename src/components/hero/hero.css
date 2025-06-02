@@ -1,0 +1,156 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.fondo-hero {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.99) 0%,
+      rgba(0, 0, 0, 0) 60%
+    ),
+    url("../../assets/images/heroFondo.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.contenido-hero {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 24px;
+  margin-top: 20px;
+}
+
+.contenedor-subtitulo-hero {
+  display: flex;
+}
+
+.subtitulo-hero {
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 600;
+  display: inline-block;
+  align-self: flex-end;
+}
+.subtitulo-hero:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #7c3aed, #ec4899);
+  margin-top: 8px;
+}
+
+.titulo-hero {
+  font-size: 2rem;
+  line-height: 1.2;
+  color: white;
+  font-weight: 800;
+  margin: 25px 0 24px 0;
+}
+.titulo-hero span {
+  background: linear-gradient(to right, #7c3aed, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.descripcion-hero {
+  font-size: 1.125rem;
+  color: #d1d5db;
+  max-width: 640px;
+  margin: 0 auto 32px;
+}
+
+.boton-principal {
+  background: linear-gradient(90deg, #7c3aed 0%, #ec4899 100%);
+  padding: 16px 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.5s, background 0.2s;
+}
+.boton-principal:hover {
+  background: linear-gradient(90deg, #4b0b9e 0%, #be185d 100%);
+  transform: scale(1.05);
+}
+
+.punto {
+  position: absolute;
+  border-radius: 50%;
+  background: #7c3aed;
+}
+.decor-pequeño {
+  width: 8px;
+  height: 8px;
+  animation: pulso 1.5s infinite;
+}
+.decor-mediano {
+  width: 12px;
+  height: 12px;
+  background: #ec4899;
+  animation: rebote 2s infinite;
+}
+.decor-grande {
+  width: 16px;
+  height: 16px;
+  background: #4b0b9e;
+  animation: ping 1.5s infinite;
+}
+
+@keyframes pulso {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 0.6;
+  }
+}
+@keyframes rebote {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+@keyframes ping {
+  0% {
+    transform: scale(0.7);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .titulo-hero {
+    font-size: 3.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .titulo-hero {
+    font-size: 4rem;
+  }
+}

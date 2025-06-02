@@ -1,0 +1,48 @@
+.contadores {
+  padding: 80px 0;
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.99) 0%,
+      rgba(0, 0, 0, 0.5) 60%,
+      rgba(0, 0, 0, 0.99) 90%
+    ),
+    url("../../assets/images/contadorFondo.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+}
+
+.contadores .contenedor {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.contadores .grid-contadores {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 24px;
+  text-align: center;
+}
+
+.contadores .tarjeta-contador {
+  cursor: default;
+  transition: transform 0.2s;
+}
+.contadores .tarjeta-contador:hover {
+  transform: scale(1.05);
+}
+
+.contadores .numero-contador {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #7c3aed;
+}
+
+.contadores .texto-contador {
+  font-size: 0.875rem;
+  color: #d1d5db;
+}

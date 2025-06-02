@@ -1,0 +1,83 @@
+.cabecera {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
+  z-index: 50;
+  padding: 30px 0;
+  animation-name: headerLlenar;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+  animation-timeline: scroll();
+}
+
+@keyframes headerLlenar {
+  0% {
+    background-color: transparent;
+  }
+  8% {
+    background-color: black;
+  }
+  100% {
+    background-color: black;
+  }
+}
+
+.cabecera .contenedor {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  box-sizing: border-box;
+}
+
+.cabecera .logo {
+  font-size: 1.5rem;
+  font-family: "Exo 2";
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: bold;
+  background: linear-gradient(to right, #7c3aed, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cabecera .enlaces-navegacion {
+  display: none;
+}
+.cabecera .enlaces-navegacion a {
+  margin-left: 40px;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+.cabecera .enlaces-navegacion a:hover {
+  color: #7c3aed;
+}
+
+.cabecera .redes-navegacion {
+  display: flex;
+  gap: 16px;
+}
+.cabecera .redes-navegacion a svg {
+  width: 25px;
+  height: 25px;
+  color: #ffffff;
+  transition: color 0.2s;
+}
+.cabecera .redes-navegacion a:hover svg {
+  color: #7c3aed;
+}
+
+@media (min-width: 768px) {
+  .cabecera .enlaces-navegacion {
+    display: flex;
+  }
+}

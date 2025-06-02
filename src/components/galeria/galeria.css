@@ -1,0 +1,146 @@
+.galeria {
+  padding: 60px 0 100px;
+  background-color: black;
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.99) 0%,
+      rgba(0, 0, 0, 0.95) 60%
+    ),
+    url("../../assets/images/galeria-eventosFondo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+}
+
+.galeria .contenedor {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.galeria .titulo-galeria {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+.galeria .titulo-galeria span {
+  color: #fff;
+}
+
+.galeria .botones-categorias {
+  display: flex;
+  margin-bottom: 16px;
+  gap: 24px;
+}
+
+.galeria .boton-categoria {
+  background: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: #cbd5e1;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  border: none;
+}
+
+.galeria .boton-categoria.activo::after,
+.galeria .boton-categoria:hover::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #7c3aed, #ec4899);
+  margin-top: 4px;
+}
+
+.galeria .rejilla-videos {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.galeria .tarjeta-video {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #1f2937;
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+
+.galeria .tarjeta-video:hover {
+  transform: scale(1.02);
+}
+
+.galeria .miniatura-video {
+  position: relative;
+  width: 100%;
+  height: 120px;
+  max-height: 120px;
+  overflow: hidden;
+}
+
+.galeria .miniatura-video .thumb-img,
+.galeria .miniatura-video .thumb-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.galeria .miniatura-video .thumb-video {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.galeria .tarjeta-video:hover .miniatura-video .thumb-img {
+  opacity: 0;
+}
+.galeria .tarjeta-video:hover .miniatura-video .thumb-video {
+  opacity: 1;
+}
+
+.galeria .superposicion-video {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.galeria .tarjeta-video:hover .superposicion-video {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.galeria .circulo-play {
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.galeria .tarjeta-video:hover .circulo-play {
+  background: #7c3aed;
+}
+
+.galeria .titulo-video {
+  text-align: center;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  padding: 15px 0;
+  color: #7c3aed;
+}
+
+.galeria .titulo-video .vertical-video {
+  padding: 0;
+}
